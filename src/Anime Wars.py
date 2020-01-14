@@ -29,7 +29,7 @@ Dio=Card("Cl", 13,)
 Vegeta=Card("Di", 13)
 
 #Automate the picking of cards
- deck=[]
-        for suit in ["Cl", "Di", "He", "Sp"]:
-            for value in range (1,14):
-                deck.append(Card(suit, value))
+deck=[]
+    for suit in ["Cl", "Di", "He", "Sp"]:
+        for value in range (1,14):
+            deck.append(Card(suit, value))
