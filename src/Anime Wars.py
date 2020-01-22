@@ -30,13 +30,6 @@ class Decks:
         random.shuffle(self.deck)
     #The full deck with 52 cards        
     def full_deck(self): 
-        # suits=["Sp", "He", "Cl", "Di"] 
-        # for suit in suits:
-        #     for value in range (1,14):
-        #         #Use the cards class to create cards
-        #         self.deck.append(Cards(suit, value, img)) 
-        # random.shuffle(deck)
-        # return deck
         self.deck = self.original_deck[:]
         random.shuffle(self.deck)
 
@@ -49,8 +42,7 @@ def show_cards(p1, p2):
     print(p1, p2)
     screen.blit(p1.img, (10, 10))
     screen.blit(p2.img, (100, 10))
-    # pygame.draw.rect(screen, (255, 0, 0), (10,10,100,100))
-    # pygame.draw.rect(screen, (0,0,255), (200, 10, 100, 100))
+
 
 discard1 = []
 discard2 = []
@@ -64,8 +56,24 @@ p2card = hand2.pop()
 
 show_cards(p1card, p2card)
 #Comparing Card
-if p1card==p2card:  
-    discard1.extend
+if p1card.value==p2card.value:  
+    discard1.extend([p1card]+hand1[-3:])
+    hand1 = hand1[:-3]
+    hand1.append(discard1.pop())
+
+    discard2.extend([p2card]+hand2[-3:])
+    hand2 = hand2[:-3]
+    hand2.append(discard2.pop())
+elif p1card.value > p2card.value:
+    hand1 = [p1card, p2card] + discard1 + discard2 + hand1
+    discard1=[]
+    discard2=[]
+elif p2card.value > p1card.value:
+    hand2 = [p2card, p1card] + discard2 + discard1 + hand2
+    discard1=[]
+    discard2=[]
+
+
     #Compare cards
 
 #Automate the picking of cards
