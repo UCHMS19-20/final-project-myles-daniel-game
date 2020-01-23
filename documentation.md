@@ -36,7 +36,7 @@ Please note that this may be a single page, but can be split into multiple pages
 * Each function and class should have a docstring at the start of the block of code to describe what it does
 
 ### Presentation
-
+https://docs.google.com/presentation/d/1dMy20k7dwmAHO51LA9jWdva0R9FVvOc73d8OUMNChAg/edit#slide=id.p
 * 3-4 minutes
 * Please include:
     * Game demo
