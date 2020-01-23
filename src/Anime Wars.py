@@ -2,7 +2,7 @@ import random
 import sys
 import pygame
 pygame.init()
-width, height = 400, 300
+width, height = 900, 700
 screen = pygame.display.set_mode( (width, height) )
 default_img = pygame.image.load("src/img/DIO.jpg")
 
