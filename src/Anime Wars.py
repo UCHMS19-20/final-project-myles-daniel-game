@@ -24,11 +24,12 @@ imgs_dict = {
     
 
 class Cards:
-    def __init__ (self,suit,value,img):
+    def __init__ (self,suit,value,img,rect):
     #Constructor for Card class
         self.suit = suit
         self.value = value
-        self.img = imgs_dict
+        self.img = pygame.image.load(imgs_dict)
+        self.rect = self.img.get_rect()
     
     def __repr__(self):
         return f"<{self.value} of {self.suit}>"
@@ -57,7 +58,7 @@ class Decks:
 #Show the players cards
 def show_cards(p1, p2):
     print(p1, p2)
-    screen.blit(p1.img[1].get_rect(), (10, 10))
+    screen.blit(p1.img, (10, 10))
     screen.blit(p2.img, (475, 10))
 
 #Empty lists so that the cards that the players play can be easily moved to the other players hand
