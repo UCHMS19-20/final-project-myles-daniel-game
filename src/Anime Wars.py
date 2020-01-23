@@ -4,14 +4,31 @@ import pygame
 pygame.init()
 width, height = 700, 600
 screen = pygame.display.set_mode( (width, height) )
-default_img = pygame.image.load("src/img/DIO.jpg")
+imgs_dict = {
+    'He': {
+        1: 'src/img/NATSUUUUUUUUUUUU.jpg',
+        2: 'src/img/AIZEN.jpg',
+        3: 'src/img/ASTA.jpg',
+        4: 'src/img/BEERUS.jpg',
+        5: 'src/img/ZORA.jpg',
+        6: 'src/img/ESDEATH.jpg',
+        7: 'src/img/ERZA.jpg',
+        8: 'src/img/TETSU TESTU.jpg',
+        9: 'src/img/PIKACHU.jpg',
+        10: 'src/img/GON.jpg',
+        11: 'src/img/BAKUGO.jpg',
+        12: 'src/img/KILLUA.jpg',
+        13: 'src/img/VEGETA.jpg',
+        14: 'src/img/BEERUS.jpg'
+    }}
+    
 
 class Cards:
     def __init__ (self,suit,value,img):
     #Constructor for Card class
         self.suit = suit
         self.value = value
-        self.img = pygame.image.load("src/img/DIO.jpg")
+        self.img = imgs_dict
     
     def __repr__(self):
         return f"<{self.value} of {self.suit}>"
@@ -24,7 +41,7 @@ class Decks:
         for suit in suits:
             for value in range (1,14):
                 #Use the cards class to create cards
-                self.original_deck.append(Cards(suit, value, default_img)) 
+                self.original_deck.append(Cards(suit, value, imgs_dict)) 
         #Make a copy of the original deck
         self.deck = self.original_deck[:]
         random.shuffle(self.deck)
@@ -40,7 +57,7 @@ class Decks:
 #Show the players cards
 def show_cards(p1, p2):
     print(p1, p2)
-    screen.blit(p1.img, (10, 10))
+    screen.blit(p1.img[1].get_rect(), (10, 10))
     screen.blit(p2.img, (475, 10))
 
 #Empty lists so that the cards that the players play can be easily moved to the other players hand
