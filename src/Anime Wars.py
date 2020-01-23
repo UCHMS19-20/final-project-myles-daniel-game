@@ -2,7 +2,7 @@ import random
 import sys
 import pygame
 pygame.init()
-width, height = 900, 700
+width, height = 700, 600
 screen = pygame.display.set_mode( (width, height) )
 default_img = pygame.image.load("src/img/DIO.jpg")
 
@@ -25,7 +25,7 @@ class Decks:
             for value in range (1,14):
                 #Use the cards class to create cards
                 self.original_deck.append(Cards(suit, value, default_img)) 
-        # random.shuffle(self.original_deck)
+        #Make a copy of the original deck
         self.deck = self.original_deck[:]
         random.shuffle(self.deck)
     #The full deck with 52 cards        
@@ -41,7 +41,7 @@ class Decks:
 def show_cards(p1, p2):
     print(p1, p2)
     screen.blit(p1.img, (10, 10))
-    screen.blit(p2.img, (100, 10))
+    screen.blit(p2.img, (475, 10))
 
 
 discard1 = []
