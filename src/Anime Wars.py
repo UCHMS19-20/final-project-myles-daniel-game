@@ -32,18 +32,18 @@ class Decks:
     def full_deck(self): 
         self.deck = self.original_deck[:]
         random.shuffle(self.deck)
-
+    #Give each player half of the full deck
     def player_hands(self):
         hand1 = self.deck[:len(self.deck)//2]
         hand2 = self.deck[len(self.deck)//2:]
         return (hand1, hand2)
-
+#Show the players cards
 def show_cards(p1, p2):
     print(p1, p2)
     screen.blit(p1.img, (10, 10))
     screen.blit(p2.img, (475, 10))
 
-
+#Empty lists so that the cards that the players play can be easily moved to the other players hand
 discard1 = []
 discard2 = []
 
@@ -55,6 +55,7 @@ p1card = hand1.pop()
 p2card = hand2.pop()
 
 show_cards(p1card, p2card)
+
 #Comparing Card
 if p1card.value==p2card.value:  
     discard1.extend([p1card]+hand1[-3:])
@@ -72,11 +73,6 @@ elif p2card.value > p1card.value:
     hand2 = [p2card, p1card] + discard2 + discard1 + hand2
     discard1=[]
     discard2=[]
-
-
-    #Compare cards
-
-#Automate the picking of cards
 
 while True:
     for event in pygame.event.get():
