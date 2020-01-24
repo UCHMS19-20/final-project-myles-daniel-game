@@ -19,8 +19,8 @@ imgs_dict = {
         11: 'src/img/BAKUGO.jpg',
         12: 'src/img/KILLUA.jpg',
         13: 'src/img/TOSHURA.jpg',
-        }
-        'Di': {
+    },
+    'Di': {
         1: 'src/img/SAITAMA.jpg',
         2: 'src/img/MEWTWO.jpg',
         3: 'src/img/AKAME.jpg',
@@ -34,8 +34,8 @@ imgs_dict = {
         11: 'src/img/SHINRA.jpg',
         12: 'src/img/TODOROKI.jpg',
         13: 'src/img/VEGETA.jpg',
-        }
-        'Sp': {
+        }, 
+    'Sp': {
         1: 'src/img/GOKU.jpg',
         2: 'src/img/FRIEZA.jpg',
         3: 'src/img/MIHAWK.jpg',
@@ -49,8 +49,9 @@ imgs_dict = {
         11: 'src/img/ACE.jpg',
         12: 'src/img/HIEI.jpg',
         13: 'src/img/ZEREF.jpg',
-        }
-        'Cl': {
+        },
+
+    'Cl': {
         1: 'src/img/NARUTO.jpg',
         2: 'src/img/MADARA.jpg',
         3: 'src/img/ICHIGO.jpg',
@@ -102,8 +103,8 @@ class Decks:
 #Show the players cards
 def show_cards(p1, p2):
     print(p1, p2)
-    screen.blit(p1.img, (10, 10))
-    screen.blit(p2.img, (475, 10))
+    screen.blit(self.img, self.rect, (10, 10))
+    screen.blit(self.img, self.rect, (475, 10))
 
 #Empty lists so that the cards that the players play can be easily moved to the other players hand
 discard1 = []
@@ -144,3 +145,14 @@ while True:
     show_cards(p1card, p2card)
 
     pygame.display.flip()
+
+def is_clicked(self):
+    if self.rect.collidepoint(pygame.mouse.get_pos()):
+        return True
+    return False
+
+for event in pygame.event.get():
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        for card in self.deck:
+            if card.is_clicked():
+                p1deck.append(card)
