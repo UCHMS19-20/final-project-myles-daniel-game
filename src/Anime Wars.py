@@ -18,9 +18,53 @@ imgs_dict = {
         10: 'src/img/GON.jpg',
         11: 'src/img/BAKUGO.jpg',
         12: 'src/img/KILLUA.jpg',
+        13: 'src/img/TOSHURA.jpg',
+        }
+        'Di': {
+        1: 'src/img/SAITAMA.jpg',
+        2: 'src/img/MEWTWO.jpg',
+        3: 'src/img/AKAME.jpg',
+        4: 'src/img/ESCANOR.jpg',
+        5: 'src/img/BACCHUS.jpg',
+        6: 'src/img/TOSHIRO.jpg',
+        7: 'src/img/YUKIHIRA SOMA.jpg',
+        8: 'src/img/ROCK LEE.jpg',
+        9: 'src/img/DENKI.jpg',
+        10: 'src/img/MELIODAS.jpg',
+        11: 'src/img/SHINRA.jpg',
+        12: 'src/img/TODOROKI.jpg',
         13: 'src/img/VEGETA.jpg',
-        14: 'src/img/BEERUS.jpg'
-    }}
+        }
+        'Sp': {
+        1: 'src/img/GOKU.jpg',
+        2: 'src/img/FRIEZA.jpg',
+        3: 'src/img/MIHAWK.jpg',
+        4: 'src/img/ARCEUS.jpg',
+        5: 'src/img/LEVII.jpg',
+        6: 'src/img/RUKIA.jpg',
+        7: 'src/img/MIKOTO.jpg',
+        8: 'src/img/LUFFY.jpg',
+        9: 'src/img/LUCK.jpg',
+        10: 'src/img/YANG.jpg',
+        11: 'src/img/ACE.jpg',
+        12: 'src/img/HIEI.jpg',
+        13: 'src/img/ZEREF.jpg',
+        }
+        'Cl': {
+        1: 'src/img/NARUTO.jpg',
+        2: 'src/img/MADARA.jpg',
+        3: 'src/img/ICHIGO.jpg',
+        4: 'src/img/SINBAD.jpg',
+        5: 'src/img/BAN.jpg',
+        6: 'src/img/GRAY.jpg',
+        7: 'src/img/RUBY.jpg',
+        8: 'src/img/KIRISHIMA.jpg',
+        9: 'src/img/LAXUS.jpg',
+        10: 'src/img/MIDORIYA.jpg',
+        11: 'src/img/MEGUMIN.jpg',
+        12: 'src/img/SASUKE.jpg',
+        13: 'src/img/DIO.jpg',
+        }}
     
 
 class Cards:
