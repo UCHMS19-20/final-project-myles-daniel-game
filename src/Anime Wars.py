@@ -2,7 +2,7 @@ import random
 import sys
 import pygame
 pygame.init()
-width, height = 700, 600
+width, height = 1000, 700
 screen = pygame.display.set_mode( (width, height) )
 imgs_dict = {
     'He': {
@@ -13,7 +13,7 @@ imgs_dict = {
         5: 'src/img/ZORA.jpg',
         6: 'src/img/ESDEATH.jpg',
         7: 'src/img/ERZA.jpg',
-        8: 'src/img/TETSU TESTU.jpg',
+        8: 'src/img/TETSU TETSU.jpg',
         9: 'src/img/PIKACHU.jpg',
         10: 'src/img/GON.jpg',
         11: 'src/img/BAKUGO.jpg',
@@ -61,7 +61,8 @@ imgs_dict = {
         7: 'src/img/RUBY.jpg',
         8: 'src/img/KIRISHIMA.jpg',
         9: 'src/img/LAXUS.jpg',
-        10: 'src/img/MIDORIYA.jpg',
+        10:'src/img/LAXUS.jpg',
+        #10: 'src/img/MIDORIYA.jpg',
         11: 'src/img/MEGUMIN.jpg',
         12: 'src/img/SASUKE.jpg',
         13: 'src/img/DIO.jpg',
@@ -69,11 +70,11 @@ imgs_dict = {
     
 
 class Cards:
-    def __init__ (self,suit,value,img,rect):
+    def __init__ (self,suit,value,):
     #Constructor for Card class
         self.suit = suit
         self.value = value
-        self.img = pygame.image.load(imgs_dict)
+        self.img = pygame.image.load(imgs_dict[suit][value])
         self.rect = self.img.get_rect()
     
     def __repr__(self):
@@ -103,8 +104,8 @@ class Decks:
 #Show the players cards
 def show_cards(p1, p2):
     print(p1, p2)
-    screen.blit(self.img, self.rect, (10, 10))
-    screen.blit(self.img, self.rect, (475, 10))
+    screen.blit(p1.img, p1.rect)
+    screen.blit(p2.img, p2.rect)
 
 #Empty lists so that the cards that the players play can be easily moved to the other players hand
 discard1 = []
