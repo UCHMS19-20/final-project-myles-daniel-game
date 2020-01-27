@@ -2,11 +2,7 @@ import random
 import sys
 import pygame
 pygame.init()
-<<<<<<< HEAD
 width, height = 1150, 600
-=======
-width, height = 1000, 700
->>>>>>> f5114ae5c7659b44236f78109b28dd385244047d
 screen = pygame.display.set_mode( (width, height) )
 imgs_dict = {
     'He': {
@@ -65,12 +61,7 @@ imgs_dict = {
         7: 'src/img/RUBY.jpg',
         8: 'src/img/KIRISHIMA.jpg',
         9: 'src/img/LAXUS.jpg',
-<<<<<<< HEAD
         10: 'src/img/DEKU.jpg',
-=======
-        10:'src/img/LAXUS.jpg',
-        #10: 'src/img/MIDORIYA.jpg',
->>>>>>> f5114ae5c7659b44236f78109b28dd385244047d
         11: 'src/img/MEGUMIN.jpg',
         12: 'src/img/SASUKE.jpg',
         13: 'src/img/DIO.jpg',
@@ -78,19 +69,12 @@ imgs_dict = {
     
 
 class Cards:
-<<<<<<< HEAD
     def __init__ (self,suit,value,img):
-=======
-    def __init__ (self,suit,value,):
->>>>>>> f5114ae5c7659b44236f78109b28dd385244047d
     #Constructor for Card class
         self.suit = suit
         self.value = value
         self.img = pygame.image.load(imgs_dict[suit][value])
-<<<<<<< HEAD
         self.img = pygame.transform.scale(self.img, (300, 500))
-=======
->>>>>>> f5114ae5c7659b44236f78109b28dd385244047d
         self.rect = self.img.get_rect()
     
     def __repr__(self):
@@ -121,10 +105,7 @@ class Decks:
 #Show the players cards
 def show_cards(p1, p2):
     print(p1, p2)
-<<<<<<< HEAD
     p2.rect.x = 900
-=======
->>>>>>> f5114ae5c7659b44236f78109b28dd385244047d
     screen.blit(p1.img, p1.rect)
     screen.blit(p2.img, p2.rect)
 
