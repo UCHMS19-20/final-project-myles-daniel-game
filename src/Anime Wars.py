@@ -2,7 +2,7 @@ import random
 import sys
 import pygame
 pygame.init()
-width, height = 1150, 600
+width, height = 1325, 600
 screen = pygame.display.set_mode( (width, height) )
 imgs_dict = {
     'He': {
@@ -74,7 +74,7 @@ class Cards:
         self.suit = suit
         self.value = value
         self.img = pygame.image.load(imgs_dict[suit][value])
-        self.img = pygame.transform.scale(self.img, (300, 500))
+        self.img = pygame.transform.scale(self.img, (400, 500))
         self.rect = self.img.get_rect()
     
     def __repr__(self):
