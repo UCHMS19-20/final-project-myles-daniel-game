@@ -2,7 +2,7 @@ import random
 import sys
 import pygame
 pygame.init()
-width, height = 1000, 700
+width, height = 1325, 600
 screen = pygame.display.set_mode( (width, height) )
 imgs_dict = {
     'He': {
@@ -61,8 +61,7 @@ imgs_dict = {
         7: 'src/img/RUBY.jpg',
         8: 'src/img/KIRISHIMA.jpg',
         9: 'src/img/LAXUS.jpg',
-        10:'src/img/LAXUS.jpg',
-        #10: 'src/img/MIDORIYA.jpg',
+        10: 'src/img/DEKU.jpg',
         11: 'src/img/MEGUMIN.jpg',
         12: 'src/img/SASUKE.jpg',
         13: 'src/img/DIO.jpg',
@@ -70,11 +69,12 @@ imgs_dict = {
     
 
 class Cards:
-    def __init__ (self,suit,value,):
+    def __init__ (self,suit,value,img):
     #Constructor for Card class
         self.suit = suit
         self.value = value
         self.img = pygame.image.load(imgs_dict[suit][value])
+        self.img = pygame.transform.scale(self.img, (400, 500))
         self.rect = self.img.get_rect()
     
     def __repr__(self):
@@ -88,10 +88,11 @@ class Decks:
         for suit in suits:
             for value in range (1,14):
                 #Use the cards class to create cards
-                self.original_deck.append(Cards(suit, value, imgs_dict)) 
+                self.original_deck.append(Cards(suit, value, imgs_dict))
         #Make a copy of the original deck
         self.deck = self.original_deck[:]
         random.shuffle(self.deck)
+
     #The full deck with 52 cards        
     def full_deck(self): 
         self.deck = self.original_deck[:]
@@ -104,6 +105,7 @@ class Decks:
 #Show the players cards
 def show_cards(p1, p2):
     print(p1, p2)
+    p2.rect.x = 900
     screen.blit(p1.img, p1.rect)
     screen.blit(p2.img, p2.rect)
 
